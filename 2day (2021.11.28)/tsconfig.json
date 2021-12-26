@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
     "compilerOptions": {
         "target": "ES6",
@@ -8,4 +9,16 @@
         "strictNullChecks": true,
         "removeComments": true,
     }
+=======
+{
+    "compilerOptions": {
+        "target": "ES6",
+        "module": "commonjs",
+        "allowJs": true,
+        "declaration": true,
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "removeComments": true,
+    }
+>>>>>>> 71e9368421479c2775896e0303795ce0e29241bb
 }
