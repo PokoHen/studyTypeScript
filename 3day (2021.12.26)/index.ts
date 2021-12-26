@@ -92,5 +92,5 @@ let user1: Adultuser = {
     name : 'kim',
     phene : 12345678,
     email : 'example@mail.com',
-    isadult : true
+    isadult : true,
 }
