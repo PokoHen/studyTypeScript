@@ -1,0 +1,49 @@
+jsx 문법을 tsx로 바꾸어 쓴다
+새로운 파일을 만드는 함수
+
+npx create-react-app 프로젝트명 --template typescript 
+
+기존 프로젝트에서 사용하는 방법
+
+npm install --save typescript @types/node @types/react @types/react-dom @types/jest
+
+tsx에서는 ts처럼 사용이 가능하다
+
+- jsx 표현한는 방법
+기본적인 방법
+let 박스 :JSX.Element = <div></div>
+
+IntrinsicElements -> HTML 태그들
+IntrinsicElements['div'] -> HTML 태그들의 div 지정
+
+- component 만들 때 타입지정
+function Profile() :JSX.Element {
+    return (
+        <div>M</div>
+    )
+}
+
+- component props 타입지정
+<Profile name="철수" age="20"></Profile>
+
+function Profile(props : {name: string, age: number}) :JSX.Element {
+    return (
+        <div>{props.name}입니다</div>
+    )
+}
+
+
+- useState 타입지정
+- useState 뒤에 <Type>을 넣어서 해결이 가능
+let [user, setUser] = useState<string | number>('kim');
+
+- redux 타입지정
+- redux 쓰는 이유
+    1. state를 한 곳에서 관리할 수 있어서 컴포넌트들이 props없이 state 다루기 쉽고 
+    2. 수정방법을 미리 reducer라는 함수로 정의해놔서 state 수정시 발생하는 버그를 줄일 수 있어서 씁니다.
+그 외엔 쓸데없음 코드만 길어짐 
+
+- redux 설치 방법
+npm install redux react-redux
+
+
